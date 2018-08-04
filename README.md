@@ -6,10 +6,15 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 
 ## Table of contents
 * [Git](#Git)
+* [OpenUI5](#OpenUI5)
 
 ### Git
 * [Enable 2FA and access github repo](Git/github-2fa.md)
 * [Extract git commit messages since &lt;commit&gt;](Git/extract-commit-msg.md)
+
+
+### OpenUI5
+* [Activate support assistant](UI5/activate-support-assistant.md)
 
 ## License
 
