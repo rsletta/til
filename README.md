@@ -5,6 +5,9 @@ This is a collection of small write-ups on stuff I learn, that can become useful
 This repo takes inspiration from @charliegerard's [dev-notes](https://github.com/charliegerard/dev-notes) and this [tweet](https://twitter.com/devdevcharlie/status/1019343097749168128). 
 
 ## Table of contents
+* [OpenUI5](#OpenUI5)
+
+### OpenUI5
 
 ## License
 
