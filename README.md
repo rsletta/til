@@ -5,8 +5,12 @@ This is a collection of small write-ups on stuff I learn, that could become usef
 This repo takes inspiration from @charliegerard's [dev-notes](https://github.com/charliegerard/dev-notes) and this [tweet](https://twitter.com/devdevcharlie/status/1019343097749168128). 
 
 ## Table of contents
+* [Architecture](#Architecture)
 * [Git](#Git)
 * [OpenUI5](#OpenUI5)
+
+### Architecture
+* [Install PlantUML](Architecture/install-plantuml.md)
 
 ### Git
 * [Enable 2FA and access github repo](Git/github-2fa.md)
