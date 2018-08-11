@@ -19,6 +19,7 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 
 ### OpenUI5
 * [Activate support assistant](UI5/activate-support-assistant.md)
+* [jQuery-electron fix](UI5/jquery-electron-fix.md)
 
 ## License
 
