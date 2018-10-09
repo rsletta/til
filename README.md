@@ -19,6 +19,7 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 
 ### OpenUI5
 * [Activate support assistant](UI5/activate-support-assistant.md)
+* [Deactivate batch ajax on OData model](UI5/deactivate-batch.md)
 
 ## License
 
