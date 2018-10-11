@@ -22,6 +22,7 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 ### OpenUI5 / SAPUI5
 * [Activate support assistant](UI5/activate-support-assistant.md)
 * [Deactivate batch ajax on OData model](UI5/deactivate-batch.md)
+* [jQuery-electron fix](UI5/jquery-electron-fix.md)
 
 ## License
 
