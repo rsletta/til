@@ -6,11 +6,15 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 
 ## Table of contents
 * [Architecture](#Architecture)
+* [Raspberry Pi](#Raspberry-Pi)
 * [Git](#Git)
 * [OpenUI5](#OpenUI5)
 
 ### Architecture
 * [Install PlantUML](Architecture/install-plantuml.md)
+
+### Raspberry Pi
+* [Fix DNS issues on fresh Raspian Strech install](RPi/fix-dns-issues-raspian.md)
 
 ### Git
 * [Enable 2FA and access github repo](Git/github-2fa.md)
