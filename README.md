@@ -8,7 +8,7 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 * [Architecture](#Architecture)
 * [Raspberry Pi](#Raspberry-Pi)
 * [Git](#Git)
-* [OpenUI5](#OpenUI5)
+* [OpenUI5 / SAPUI5](#OpenUI5-/-SAPUI5)
 
 ### Architecture
 * [Install PlantUML](Architecture/install-plantuml.md)
