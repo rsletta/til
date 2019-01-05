@@ -16,6 +16,7 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 
 ### Raspberry Pi
 * [Fix DNS issues on fresh Raspian Strech install](RPi/fix-dns-issues-raspian.md)
+* [Turn of IPv6 Raspian Strech install](RPi/turn-of-ipv6.md)
 
 ### Git
 * [Enable 2FA and access github repo](Git/github-2fa.md)
