@@ -21,6 +21,7 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 ### Git
 * [Enable 2FA and access github repo](Git/github-2fa.md)
 * [Extract git commit messages since &lt;commit&gt;](Git/extract-commit-msg.md)
+* [Rewrite commit author in Git repo](Git/rewrite-commit-author.md)
 
 ### Node.js
 * [Install NVM with Homebrew](Nodejs/install-nvm.md)
