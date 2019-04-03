@@ -10,6 +10,7 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 * [Git](#Git)
 * [Node.js](#Node.js)
 * [OpenUI5 / SAPUI5](#OpenUI5-/-SAPUI5)
+* [macOS](#macOS)
 
 ### Architecture
 * [Install PlantUML](Architecture/install-plantuml.md)
@@ -33,6 +34,9 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 * [Activate support assistant](UI5/activate-support-assistant.md)
 * [Deactivate batch ajax on OData model](UI5/deactivate-batch.md)
 * [jQuery-electron fix](UI5/jquery-electron-fix.md)
+
+### macOS
+* [Keyboard identified wrong](macOS/wrong-keyboard-ident.md)
 
 ## License
 
