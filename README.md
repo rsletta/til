@@ -41,6 +41,6 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 
 ## License
 
-© 2018 Ronnie André Bjørvik Sletta
+© 2019 Ronnie André Bjørvik Sletta
 
 This repository is licensed under the MIT license. See ```LICENSE``` for details.
