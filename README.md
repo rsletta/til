@@ -15,6 +15,9 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 ### Architecture
 * [Install PlantUML](Architecture/install-plantuml.md)
 
+### Docker
+* [Manage multiple Docker instances using Portainer agent](Docker/portainer-agent.md)
+
 ### Raspberry Pi
 * [Fix DNS issues on fresh Raspian Strech install](RPi/fix-dns-issues-raspian.md)
 * [Turn of IPv6 Raspian Strech install](RPi/turn-of-ipv6.md)
