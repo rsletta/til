@@ -33,6 +33,8 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 
 ### SAP
 * [SAP GUI for Java - Connection strings](SAP/sapgui_java_constring.md)
+* [Change user password in HANA Express](SAP/hxe_user_pw_change.md)
+* [Certificate error in HXE Web IDE logs](SAP/renew_certificate_xsa.md)
 
 ### OpenUI5 / SAPUI5
 * [Activate support assistant](UI5/activate-support-assistant.md)
