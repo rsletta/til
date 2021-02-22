@@ -23,6 +23,8 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 
 ### Server
 * [Copy public key to remote server](Server/copy_id.md)
+* [Proxmox trying to acquire lock to stop VM - fix error](Server/proxmox_stop_error.md)
+
 ### Raspberry Pi
 * [Fix DNS issues on fresh Raspian Strech install](RPi/fix-dns-issues-raspian.md)
 * [Turn of IPv6 Raspian Strech install](RPi/turn-of-ipv6.md)
