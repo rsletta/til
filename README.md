@@ -6,9 +6,12 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 
 ## Table of contents
 * [Architecture](#Architecture)
+* [Docker](#Docker)
+* [Server](#Server)
 * [Raspberry Pi](#Raspberry-Pi)
 * [Git](#Git)
 * [Node.js](#Node.js)
+* [SAP](#SAP)
 * [OpenUI5 / SAPUI5](#OpenUI5-/-SAPUI5)
 * [macOS](#macOS)
 
@@ -18,6 +21,8 @@ This repo takes inspiration from @charliegerard's [dev-notes](https://github.com
 ### Docker
 * [Manage multiple Docker instances using Portainer agent](Docker/portainer-agent.md)
 
+### Server
+* [Copy public key to remote server](Server/copy_id.md)
 ### Raspberry Pi
 * [Fix DNS issues on fresh Raspian Strech install](RPi/fix-dns-issues-raspian.md)
 * [Turn of IPv6 Raspian Strech install](RPi/turn-of-ipv6.md)
