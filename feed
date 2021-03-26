@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+
+// Generate Atom feed from the repo issues.
+
+// Reads a JSON formatted list of issues via STDIN. Such a list can be
+// retrieved via /repos/:owner/:repo/issues?sort=created&direction=desc
+
+const fs = require('fs')
+const { Feed } = require('feed')
+const { Converter } = require('showdown')
+const converter = new Converter()
+
+const author = {
+  name: 'Ronnie André Bjørvik Sletta',
+  email: 'rsletta@gmail.com',
+  link: 'https://github.com/rsletta'
+}
+
+const issues = JSON.parse(fs.readFileSync(0, 'utf-8') || '[]')
+
+if (issues.length === 0) process.exit(1)
+
+const feed = new Feed({
+  title: 'Today I Learned - @rsletta',
+  description: 'A reference of stuff I\'ve picked up along the way',
+  id: 'https://github.com/rsletta/til',
+  link: 'https://github.com/rsletta/til',
+  generator: 'NPM module feed (https://www.npmjs.com/package/feed)',
+  copyright: 'Ronnie André Bjørvik Sletta',
+  author: author,
+  feedLinks: {
+    atom: 'https://github.com/rsletta/til',
+  },
+});
+
+issues.forEach(issue => {
+  feed.addItem({
+    title: issue.title,
+    id: issue.html_url,
+    link: issue.html_url,
+    content: converter.makeHtml(issue.body),
+    author: author,
+    date: new Date(issue.created_at),
+    category: issue.labels.reduce((acc, curr) => {
+      if (curr.name !== 'entry') {
+        acc.push({name: curr.name});
+      }
+      return acc;
+    }, [])
+  })
+})
+
+console.log(feed.atom1())

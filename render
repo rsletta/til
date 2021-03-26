@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+// Render the most recent journal entries for continuous reading.
+
+// Reads a JSON formatted list of issues via STDIN. Such a list can be
+// retrieved via /repos/:owner/:repo/issues?sort=created&direction=desc
+
+const fs = require('fs')
+const issues = JSON.parse(fs.readFileSync(0, 'utf-8') || '[]')
+if (issues.length === 0) process.exit(1)
+
+console.log(
+  issues
+  .map(issue => `## ${issue.title}\n${issue.body}\n\n[Discuss](${issue.html_url})`)
+  .join('\n\n<hr>\n\n')
+)

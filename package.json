@@ -1,0 +1,23 @@
+{
+  "name": "til",
+  "version": "1.0.0",
+  "description": "Today I Learned",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsletta/til.git"
+  },
+  "author": "Ronnie André Bjørvik Sletta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsletta/til/issues"
+  },
+  "homepage": "https://github.com/rsletta/til#readme",
+  "dependencies": {
+    "feed": "^4.2.2",
+    "showdown": "^1.9.1"
+  }
+}
