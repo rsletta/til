@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-03-26T22:58:56.903Z</updated>
+    <updated>2021-03-26T23:01:23.272Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -13,6 +13,17 @@
     <link rel="self" href="https://github.com/rsletta/til"/>
     <subtitle>A reference of stuff I've picked up along the way</subtitle>
     <rights>Ronnie André Bjørvik Sletta</rights>
+    <entry>
+        <title type="html"><![CDATA[Change user password in HANA Express]]></title>
+        <id>https://github.com/rsletta/til/issues/17</id>
+        <link href="https://github.com/rsletta/til/issues/17"/>
+        <updated>2021-03-26T23:01:08.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="shell language-shell">hdbsql -i 90 -d systemdb -u SYSTEM
+</code></pre>
+<pre><code class="shell language-shell">alter user XSA_DEV password &lt;new password&gt;;
+</code></pre>]]></content>
+        <category label="sap"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[jQuery-Electron fix]]></title>
         <id>https://github.com/rsletta/til/issues/16</id>

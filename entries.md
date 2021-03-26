@@ -1,3 +1,16 @@
+## Change user password in HANA Express
+```shell
+hdbsql -i 90 -d systemdb -u SYSTEM
+```
+
+```shell
+alter user XSA_DEV password <new password>;
+```
+
+[Discuss](https://github.com/rsletta/til/issues/17)
+
+<hr>
+
 ## jQuery-Electron fix
 When using Electron and UI5, there are som issues with loading jQuery. Fix this using the following snippet:
 
