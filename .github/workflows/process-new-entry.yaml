@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  # First, generate the new feed XML and 'recent' content based on the issues list.
+  # First, generate the new feed XML and 'entries' content based on the issues list.
   generate:
     if: github.actor == github.repository_owner && contains(github.event.issue.labels.*.name, 'entry')
     runs-on: self-hosted
@@ -18,18 +18,20 @@ jobs:
     - name: Install Node modules
       run: |
         npm install
-    - name: Generate feed XML and 'recent' content
+    - name: Generate feed XML and 'entries' content
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         gh api "/repos/${GITHUB_REPOSITORY}/issues?labels=entry&sort=created&direction=descending" > issues.json
         ./feed < issues.json > feed.xml
-        ./render < issues.json > recent.md
+        cat feed.xml
+        ./render < issues.json > entries.md
+        cat entries.md
     - name: Commit any updates
       run: |
         git config --global user.email "rsletta@gmail.com"
         git config --global user.name "Ronnie André Bjørvik Sletta"
-        git diff --exit-code feed.xml recent.md || git add feed.xml recent.md && git commit -m 'update feed and recent' && git push
+        git diff --exit-code feed.xml entries.md || git add feed.xml entries.md && git commit -m 'update feed and entries' && git push
   # Now, tweet about the new entry, but only when the entry is originally created
   # and (via the needs: generate) only if the content and feed generation was OK.
   #tweet:
