@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-03-26T23:01:56.383Z</updated>
+    <updated>2021-03-26T23:02:28.086Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -13,6 +13,20 @@
     <link rel="self" href="https://github.com/rsletta/til"/>
     <subtitle>A reference of stuff I've picked up along the way</subtitle>
     <rights>Ronnie André Bjørvik Sletta</rights>
+    <entry>
+        <title type="html"><![CDATA[SAP GUI for Java - Connection strings]]></title>
+        <id>https://github.com/rsletta/til/issues/19</id>
+        <link href="https://github.com/rsletta/til/issues/19"/>
+        <updated>2021-03-26T23:02:13.000Z</updated>
+        <content type="html"><![CDATA[<p>The way you define a new SAP Connection in SAP GUI For Java differs slightly from SAP GUI For Windows. Let’s assume that you have the following connection information:</p>
+<p>Address: 10.1.3.40
+System No: 02
+In SAP GUI For Java, you need to get to the “Advanced” tab, click “Expert mode” and enter the following connection string:</p>
+<pre><code>conn=/H/10.1.3.40/S/3202
+</code></pre>
+<p>Obviously, the address goes between /H/ and /S/ and the system number goes to the end of the string. If your system ID is 00, you need to enter 3200. If your system ID is 07, you need to enter 3207. In our case, your system ID is 02 so you need to enter 3202.</p>]]></content>
+        <category label="sap"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Certificate error in HXE Web IDE logs]]></title>
         <id>https://github.com/rsletta/til/issues/18</id>
