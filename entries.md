@@ -1,3 +1,19 @@
+## Deactivate batch ajax on OData model
+```json
+"models": {
+    "yourModel": {
+        "dataSource" : "yourDataSource",
+        "settings" : {
+          "useBatch" : false
+        }
+    }
+}
+```
+
+[Discuss](https://github.com/rsletta/til/issues/15)
+
+<hr>
+
 ## Activate OpenUI5 support assistant
 Keybind: CTRL-ALT-SHIFT-P
 
