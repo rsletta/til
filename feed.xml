@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-03-26T23:01:23.272Z</updated>
+    <updated>2021-03-26T23:01:56.383Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -13,6 +13,19 @@
     <link rel="self" href="https://github.com/rsletta/til"/>
     <subtitle>A reference of stuff I've picked up along the way</subtitle>
     <rights>Ronnie André Bjørvik Sletta</rights>
+    <entry>
+        <title type="html"><![CDATA[Certificate error in HXE Web IDE logs]]></title>
+        <id>https://github.com/rsletta/til/issues/18</id>
+        <link href="https://github.com/rsletta/til/issues/18"/>
+        <updated>2021-03-26T23:01:41.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>Enter HXE container</li>
+<li>Logon to XSA CLI with command xs login</li>
+</ul>
+<pre><code class="shell language-shell">XSA reset-certificate
+</code></pre>]]></content>
+        <category label="sap"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Change user password in HANA Express]]></title>
         <id>https://github.com/rsletta/til/issues/17</id>

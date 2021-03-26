@@ -1,3 +1,15 @@
+## Certificate error in HXE Web IDE logs
+* Enter HXE container
+* Logon to XSA CLI with command xs login
+
+```shell
+XSA reset-certificate
+```
+
+[Discuss](https://github.com/rsletta/til/issues/18)
+
+<hr>
+
 ## Change user password in HANA Express
 ```shell
 hdbsql -i 90 -d systemdb -u SYSTEM
