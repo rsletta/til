@@ -24,14 +24,12 @@ jobs:
       run: |
         gh api "/repos/${GITHUB_REPOSITORY}/issues?labels=entry&sort=created&direction=descending" > issues.json
         ./feed < issues.json > feed.xml
-        cat feed.xml
         ./render < issues.json > entries.md
-        cat entries.md
     - name: Commit any updates
       run: |
         git config --global user.email "rsletta@gmail.com"
         git config --global user.name "Ronnie André Bjørvik Sletta"
-        git diff --exit-code feed.xml entries.md || git add feed.xml entries.md && git commit -m 'update feed and entries' && git push
+        git add feed.xml entries.md && git commit -m 'update feed and entries' && git push
   # Now, tweet about the new entry, but only when the entry is originally created
   # and (via the needs: generate) only if the content and feed generation was OK.
   #tweet:
