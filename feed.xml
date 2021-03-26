@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-03-26T22:58:19.345Z</updated>
+    <updated>2021-03-26T22:58:56.903Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -13,6 +13,33 @@
     <link rel="self" href="https://github.com/rsletta/til"/>
     <subtitle>A reference of stuff I've picked up along the way</subtitle>
     <rights>Ronnie André Bjørvik Sletta</rights>
+    <entry>
+        <title type="html"><![CDATA[jQuery-Electron fix]]></title>
+        <id>https://github.com/rsletta/til/issues/16</id>
+        <link href="https://github.com/rsletta/til/issues/16"/>
+        <updated>2021-03-26T22:58:42.000Z</updated>
+        <content type="html"><![CDATA[<p>When using Electron and UI5, there are som issues with loading jQuery. Fix this using the following snippet:</p>
+<pre><code class="html language-html">&lt;!-- Insert this line above script imports  --&gt;
+&lt;script&gt;if (typeof module === 'object') {window.module = module; module = undefined;}&lt;/script&gt;
+
+&lt;!-- normal script imports etc  --&gt;
+&lt;script id='sap-ui-bootstrap' 
+    src='../resources/sap-ui-core.js'
+    data-sap-ui-theme='sap_belize'  
+    data-sap-ui-libs='sap.m'
+    data-sap-ui-compatVersion='edge'
+    data-sap-ui-bindingSyntax='complex'
+    data-sap-ui-resourceroots='{
+        "&lt;namespace&gt;": "./"
+    }'
+    data-sap-ui-preload='async'&gt;&lt;/script&gt;
+
+&lt;!-- Insert this line after script imports --&gt;
+&lt;script&gt;if (window.module) module = window.module;&lt;/script&gt;
+</code></pre>
+<h3 id="sourceelectronjqueryisnotdefinedhttpsstackoverflowcomquestions32621988electronjqueryisnotdefined3748052137480521">Source: <a href="https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined/37480521#37480521">Electron: jQuery is not defined</a></h3>]]></content>
+        <category label="ui5"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Deactivate batch ajax on OData model]]></title>
         <id>https://github.com/rsletta/til/issues/15</id>
