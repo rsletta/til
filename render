@@ -57,7 +57,7 @@ console.log(
         return `## ${entry.
           title}\n${entry.body}\n\n[Discuss](${entry.html_url})`
       }
-      )).join('\n<hr>\n')
+      )).join('\n<hr>\n\n')
       return `${header}\n${entries}`
     })
     .join('\n\n<hr>\n\n')
