@@ -42,12 +42,19 @@ const sortedIssues = categories.reduce((acc, curr) => {
 console.log(`# Today I Learned - A reference of stuff I\'ve picked up along the way`)
 console.log(`## TABLE OF CONTENT\n`)
 console.log(
-  categories
-    .map(category => {
-      let link = category.desc.split(' ').join('-')
-      return `* [${category.desc}](#${link})`
-    })
-    .join('\n')
+  sortedIssues
+  .map(issue => {
+    const header = `## ${issue.cat.desc}\n`
+    const entries = issue.entries.map((entry => {
+      let link = entry.
+      title.split(' ').join('-')
+      return `* [${entry.
+        title}](#${link})`
+    }
+    )).join('\n')
+    return `${header}\n${entries}`
+  })
+  .join('\n\n<hr>\n\n')
 )
 console.log(
   sortedIssues
@@ -62,5 +69,3 @@ console.log(
     })
     .join('\n\n<hr>\n\n')
 )
-
-// `## ${issue.name}\n${issue.body}\n\n[Discuss](${issue.html_url})`
