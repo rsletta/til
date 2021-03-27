@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-03-27T00:47:57.193Z</updated>
+    <updated>2021-03-27T00:52:34.265Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -238,7 +238,7 @@ fi
         <id>https://github.com/rsletta/til/issues/3</id>
         <link href="https://github.com/rsletta/til/issues/3"/>
         <updated>2021-03-25T23:37:42.000Z</updated>
-        <content type="html"><![CDATA[<p>To quickly get list of events. Usefull for release notes etc…</p>
+        <content type="html"><![CDATA[<p>To quickly get list of events. Usefull for release notes etc.</p>
 <p><code>git log --format=%B &lt;commit hash&gt;..HEAD &gt; filename.ext</code></p>]]></content>
         <category label="git"/>
     </entry>

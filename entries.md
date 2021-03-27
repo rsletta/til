@@ -27,6 +27,7 @@ Obviously, the address goes between /H/ and /S/ and the system number goes to th
 
 [Discuss](https://github.com/rsletta/til/issues/19)
 <hr>
+
 ## Certificate error in HXE Web IDE logs
 * Enter HXE container
 * Logon to XSA CLI with command xs login
@@ -37,6 +38,7 @@ XSA reset-certificate
 
 [Discuss](https://github.com/rsletta/til/issues/18)
 <hr>
+
 ## Change user password in HANA Express
 ```shell
 hdbsql -i 90 -d systemdb -u SYSTEM
@@ -80,6 +82,7 @@ When using Electron and UI5, there are som issues with loading jQuery. Fix this 
 
 [Discuss](https://github.com/rsletta/til/issues/16)
 <hr>
+
 ## Deactivate batch ajax on OData model
 Edit in manifest.json.
 
@@ -96,6 +99,7 @@ Edit in manifest.json.
 
 [Discuss](https://github.com/rsletta/til/issues/15)
 <hr>
+
 ## Activate OpenUI5 support assistant
 Keybind: CTRL-ALT-SHIFT-P
 
@@ -117,6 +121,7 @@ rm /var/lock/qemu-server/lock-<VM id>.conf
 
 [Discuss](https://github.com/rsletta/til/issues/13)
 <hr>
+
 ## Copy public key to remote server
 ```shell
 ssh-copy-id username@remote_host
@@ -144,6 +149,7 @@ Modify kernel parameters
 
 [Discuss](https://github.com/rsletta/til/issues/11)
 <hr>
+
 ## Fix DNS issues on fresh Raspian Strech install
 Edit ```/etc/dhcpcd.conf```. 
 
@@ -229,19 +235,22 @@ fi
 
 [Discuss](https://github.com/rsletta/til/issues/6)
 <hr>
+
 ## Enable 2FA and access github repo
 When 2FA is enabled, one must create a personal access token, and use that as password. Remote repo must be on HTTPS, not SSH.
 [Using two-factor authentication with the command line](https://help.github.com/articles/accessing-github-using-two-factor-authentication/#using-two-factor-authentication-with-the-command-line)
 
 [Discuss](https://github.com/rsletta/til/issues/5)
 <hr>
+
 ## Fix commit author with git amend
 ```git commit --amend --author="Author Name <email@address.com>"```
 
 [Discuss](https://github.com/rsletta/til/issues/4)
 <hr>
+
 ## Extract git commit messages since <commit>
-To quickly get list of events. Usefull for release notes etc...
+To quickly get list of events. Usefull for release notes etc.
 
 ```git log --format=%B <commit hash>..HEAD > filename.ext```
 
@@ -292,6 +301,7 @@ github -> gitlab : ~#movingtogitlab
 
 [Discuss](https://github.com/rsletta/til/issues/2)
 <hr>
+
 ## Install PlantUML
 macOS:
 
