@@ -54,7 +54,7 @@ console.log(
     .map(issue => {
       const header = `## ${issue.cat.desc}\n`
       const entries = issue.entries.map((entry => {
-        return `## ${entry.
+        return `### ${entry.
           title}\n${entry.body}\n\n[Discuss](${entry.html_url})`
       }
       )).join('\n<hr>\n\n')
