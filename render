@@ -9,8 +9,58 @@ const fs = require('fs')
 const issues = JSON.parse(fs.readFileSync(0, 'utf-8') || '[]')
 if (issues.length === 0) process.exit(1)
 
+const categories = issues.reduce((acc, curr) => {
+  const issueCats = curr.labels.reduce((acc, curr) => {
+    if (curr.name !== 'entry') {
+      acc.push({name: curr.name, desc: curr.description})
+    }
+    return acc;
+  }, [])
+  acc.push(...issueCats)
+  return acc
+}, [])
+  .reduce((x, curr) => {
+    const current = x.find((label => label.name == curr.name))
+    if (current === undefined) {
+      x.push(curr)
+    }
+    return x;
+  }, [])
+
+const sortedIssues = categories.reduce((acc, curr) => {
+  const filtered = issues.filter((issue) => {
+    const current = issue.labels.filter((label => label.name === curr.name));
+    if (current.length > 0) {
+      return issue
+    }
+  })
+  acc.push({ cat: curr, entries: filtered })
+  return acc
+}, [])
+
+// Write header
+console.log(`# Today I Learned - A reference of stuff I\'ve picked up along the way`)
+console.log(`## TABLE OF CONTENT\n`)
 console.log(
-  issues
-  .map(issue => `## ${issue.title}\n${issue.body}\n\n[Discuss](${issue.html_url})`)
-  .join('\n\n<hr>\n\n')
+  categories
+    .map(category => {
+      let link = category.desc.split(' ').join('-')
+      return `* [${category.desc}](#${link})`
+    })
+    .join('\n')
 )
+console.log(
+  sortedIssues
+    .map(issue => {
+      const header = `## ${issue.cat.desc}\n`
+      const entries = issue.entries.map((entry => {
+        return `## ${entry.
+          title}\n${entry.body}\n\n[Discuss](${entry.html_url})`
+      }
+      )).join('\n<hr>\n')
+      return `${header}\n${entries}`
+    })
+    .join('\n\n<hr>\n\n')
+)
+
+// `## ${issue.name}\n${issue.body}\n\n[Discuss](${issue.html_url})`
