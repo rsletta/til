@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-03-26T23:02:28.086Z</updated>
+    <updated>2021-03-27T00:47:57.193Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -83,7 +83,8 @@ In SAP GUI For Java, you need to get to the “Advanced” tab, click “Expert 
         <id>https://github.com/rsletta/til/issues/15</id>
         <link href="https://github.com/rsletta/til/issues/15"/>
         <updated>2021-03-26T22:58:04.000Z</updated>
-        <content type="html"><![CDATA[<pre><code class="json language-json">"models": {
+        <content type="html"><![CDATA[<p>Edit in manifest.json.</p>
+<pre><code class="json language-json">"models": {
     "yourModel": {
         "dataSource" : "yourDataSource",
         "settings" : {
