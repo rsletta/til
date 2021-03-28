@@ -131,7 +131,6 @@ docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/d
 ### Get Version
 ```shell
 VERSION=`curl  "https://api.github.com/repos/cli/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c2-` 
-echo $VERSION
 ```
 
 ### Download latest version

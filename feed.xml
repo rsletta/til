@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-03-28T12:20:09.013Z</updated>
+    <updated>2021-03-28T12:39:32.359Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -21,7 +21,6 @@
         <content type="html"><![CDATA[<h2 id="manualinstall">Manual Install</h2>
 <h3 id="getversion">Get Version</h3>
 <pre><code class="shell language-shell">VERSION=`curl  "https://api.github.com/repos/cli/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c2-` 
-echo $VERSION
 </code></pre>
 <h3 id="downloadlatestversion">Download latest version</h3>
 <h3 id="withwget">With wget</h3>
