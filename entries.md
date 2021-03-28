@@ -12,6 +12,7 @@
 
 ### Git
 
+* [Install GitHub CLI](#Install-GitHub-CLI)
 * [Rewrite commit author in Git repo](#Rewrite-commit-author-in-Git-repo)
 * [Enable 2FA and access github repo](#Enable-2FA-and-access-github-repo)
 * [Fix commit author with git amend](#Fix-commit-author-with-git-amend)
@@ -124,6 +125,35 @@ docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/d
 <hr>
 
 ## Git
+
+### Install GitHub CLI
+## Manual Install
+### Get Version
+```shell
+VERSION=`curl  "https://api.github.com/repos/cli/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c2-` 
+echo $VERSION
+```
+
+### Download latest version
+### With wget
+```shell
+wget https://github.com/cli/cli/releases/download/v${VERSION}/gh_${VERSION}_linux_amd64.tar.gz
+```
+### With curl
+```shell
+curl -sSL https://github.com/cli/cli/releases/download/v${VERSION}/gh_${VERSION}_linux_amd64.tar.gz -o gh_${VERSION}_linux_amd64.tar.gz
+```
+### Extract downloaded file
+```shell
+tar xvf gh_${VERSION}_linux_amd64.tar.gz
+```
+### Copy to /usr/local/bin
+```shell
+sudo cp gh_${VERSION}_linux_amd64/bin/gh /usr/local/bin/
+```
+
+[Discuss](https://github.com/rsletta/til/issues/20)
+<hr>
 
 ### Rewrite commit author in Git repo
 ```shell
