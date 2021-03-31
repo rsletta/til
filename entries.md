@@ -42,6 +42,10 @@
 * [Proxmox trying to acquire lock to stop VM - fix error](#Proxmox-trying-to-acquire-lock-to-stop-VM---fix-error)
 * [Copy public key to remote server](#Copy-public-key-to-remote-server)
 
+### Terminal / Shell
+
+* [Cleaning up files with awk](#Cleaning-up-files-with-awk)
+
 ### UI5
 
 * [jQuery-Electron fix](#jQuery-Electron-fix)
@@ -327,6 +331,26 @@ ssh-copy-id username@remote_host
 ```
 
 [Discuss](https://github.com/rsletta/til/issues/12)
+
+<hr>
+
+## Terminal / Shell
+
+### Cleaning up files with awk
+Needed to clean up a JSON file, after I copied the JSON from the browser and got the line numbers too.
+
+Move every even line to clean file
+```shell
+awk 'NR % 2 == 0' dirty.json > clean.json
+```
+
+Move every odd line to clean file
+```shell
+awk 'NR % 2 != 0' dirty.json > clean.json
+```
+
+
+[Discuss](https://github.com/rsletta/til/issues/21)
 
 <hr>
 

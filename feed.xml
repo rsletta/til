@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-03-28T12:39:32.359Z</updated>
+    <updated>2021-03-31T00:05:12.742Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -13,6 +13,20 @@
     <link rel="self" href="https://github.com/rsletta/til"/>
     <subtitle>A reference of stuff I've picked up along the way</subtitle>
     <rights>Ronnie André Bjørvik Sletta</rights>
+    <entry>
+        <title type="html"><![CDATA[Cleaning up files with awk]]></title>
+        <id>https://github.com/rsletta/til/issues/21</id>
+        <link href="https://github.com/rsletta/til/issues/21"/>
+        <updated>2021-03-30T23:33:38.000Z</updated>
+        <content type="html"><![CDATA[<p>Needed to clean up a JSON file, after I copied the JSON from the browser and got the line numbers too.</p>
+<p>Move every even line to clean file</p>
+<pre><code class="shell language-shell">awk 'NR % 2 == 0' dirty.json &gt; clean.json
+</code></pre>
+<p>Move every odd line to clean file</p>
+<pre><code class="shell language-shell">awk 'NR % 2 != 0' dirty.json &gt; clean.json
+</code></pre>]]></content>
+        <category label="terminal-shell"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Install GitHub CLI]]></title>
         <id>https://github.com/rsletta/til/issues/20</id>
