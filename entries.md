@@ -48,6 +48,7 @@
 
 ### UI5
 
+* [Prevent double initializations of views](#Prevent-double-initializations-of-views)
 * [jQuery-Electron fix](#jQuery-Electron-fix)
 * [Deactivate batch ajax on OData model](#Deactivate-batch-ajax-on-OData-model)
 * [Activate OpenUI5 support assistant](#Activate-OpenUI5-support-assistant)
@@ -355,6 +356,55 @@ awk 'NR % 2 != 0' dirty.json > clean.json
 <hr>
 
 ## UI5
+
+### Prevent double initializations of views
+It is best practice to not have the same view as both root view, and target of _blank_ route. Using it for both, causes it to initialize twice. 
+
+```JSON
+"sap.ui5": {
+    "flexEnabled": true,
+    "rootView": {
+      "viewName": "namespace.view.Root",
+      "type": "XML",
+      "async": true,
+      "id": "appControl"
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "namespace.view",
+        "controlId": "appControl",
+        "transition": "slide",
+        "controlAggregation": "pages",
+        "async": true,
+        "bypassed": {
+          "target": "notFound"
+        }
+      },
+      "routes": [
+        {
+          "name": "appHome",
+          "pattern": "",
+          "target": "Home"
+        }
+      ],
+      "targets": {
+        "Home": {
+          "viewName": "App",
+          "viewId": "appView",
+          "viewType": "XML",
+          "viewLevel": 1  
+        }
+      }
+    }
+  }
+```
+
+Reference: [Root View and Controller is instantiated 2 times #1746](https://github.com/SAP/openui5/issues/1746#issuecomment-346808328)
+
+[Discuss](https://github.com/rsletta/til/issues/22)
+<hr>
 
 ### jQuery-Electron fix
 When using Electron and UI5, there are som issues with loading jQuery. Fix this using the following snippet:

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-03-31T00:05:12.742Z</updated>
+    <updated>2021-03-31T15:00:29.981Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -13,6 +13,54 @@
     <link rel="self" href="https://github.com/rsletta/til"/>
     <subtitle>A reference of stuff I've picked up along the way</subtitle>
     <rights>Ronnie André Bjørvik Sletta</rights>
+    <entry>
+        <title type="html"><![CDATA[Prevent double initializations of views]]></title>
+        <id>https://github.com/rsletta/til/issues/22</id>
+        <link href="https://github.com/rsletta/til/issues/22"/>
+        <updated>2021-03-31T14:55:27.000Z</updated>
+        <content type="html"><![CDATA[<p>It is best practice to not have the same view as both root view, and target of <em>blank</em> route. Using it for both, causes it to initialize twice. </p>
+<pre><code class="JSON language-JSON">"sap.ui5": {
+    "flexEnabled": true,
+    "rootView": {
+      "viewName": "namespace.view.Root",
+      "type": "XML",
+      "async": true,
+      "id": "appControl"
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "namespace.view",
+        "controlId": "appControl",
+        "transition": "slide",
+        "controlAggregation": "pages",
+        "async": true,
+        "bypassed": {
+          "target": "notFound"
+        }
+      },
+      "routes": [
+        {
+          "name": "appHome",
+          "pattern": "",
+          "target": "Home"
+        }
+      ],
+      "targets": {
+        "Home": {
+          "viewName": "App",
+          "viewId": "appView",
+          "viewType": "XML",
+          "viewLevel": 1  
+        }
+      }
+    }
+  }
+</code></pre>
+<p>Reference: <a href="https://github.com/SAP/openui5/issues/1746#issuecomment-346808328">Root View and Controller is instantiated 2 times #1746</a></p>]]></content>
+        <category label="ui5"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Cleaning up files with awk]]></title>
         <id>https://github.com/rsletta/til/issues/21</id>
