@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-03-31T15:04:57.818Z</updated>
+    <updated>2021-04-01T12:19:32.760Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -13,6 +13,30 @@
     <link rel="self" href="https://github.com/rsletta/til"/>
     <subtitle>A reference of stuff I've picked up along the way</subtitle>
     <rights>Ronnie André Bjørvik Sletta</rights>
+    <entry>
+        <title type="html"><![CDATA[Rename git master branch to main]]></title>
+        <id>https://github.com/rsletta/til/issues/23</id>
+        <link href="https://github.com/rsletta/til/issues/23"/>
+        <updated>2021-04-01T12:19:14.000Z</updated>
+        <content type="html"><![CDATA[<p>How to rename old repository <code>master</code> branch to <code>main</code>.</p>
+<h3 id="renamelocalbranch">Rename local branch</h3>
+<pre><code class="shell language-shell">git branch -m master main
+</code></pre>
+<h3 id="pushnewmainbranchtoorigin">Push new <code>main</code> branch to origin</h3>
+<pre><code class="shell language-shell">git push -u origin main
+</code></pre>
+<h3 id="deleteoldmasterbranch">Delete old master branch</h3>
+<p>If old master isn't the <code>default</code>branch on the remote</p>
+<pre><code class="shell language-shell">git push origin --delete master
+</code></pre>
+<p>If you get an error, this step needs to be done manually on the remote, as <code>main</code> needs to be set as <code>default</code>before deleting the old <code>master</code>.</p>
+<p>Error message:</p>
+<pre><code class="shell language-shell">To github.com:&lt;account&gt;/&lt;repo name&gt;.git
+ ! [remote rejected] master (refusing to delete the current branch: refs/heads/master)
+error: failed to push some refs to 'github.com:&lt;account&gt;/&lt;repo name&gt;.git'
+</code></pre>]]></content>
+        <category label="git"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Prevent double initializations of views]]></title>
         <id>https://github.com/rsletta/til/issues/22</id>

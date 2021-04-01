@@ -12,6 +12,7 @@
 
 ### Git
 
+* [Rename git master branch to main](#Rename-git-master-branch-to-main)
 * [Install GitHub CLI](#Install-GitHub-CLI)
 * [Rewrite commit author in Git repo](#Rewrite-commit-author-in-Git-repo)
 * [Enable 2FA and access github repo](#Enable-2FA-and-access-github-repo)
@@ -130,6 +131,37 @@ docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/d
 <hr>
 
 ## Git
+
+### Rename git master branch to main
+How to rename old repository ```master``` branch to ```main```.
+
+### Rename local branch
+```shell
+git branch -m master main
+```
+
+### Push new ```main``` branch to origin
+```shell
+git push -u origin main
+```
+
+### Delete old master branch
+If old master isn't the ```default```branch on the remote
+```shell
+git push origin --delete master
+```
+
+If you get an error, this step needs to be done manually on the remote, as ```main``` needs to be set as ```default```before deleting the old ```master```.
+
+Error message:
+```shell
+To github.com:<account>/<repo name>.git
+ ! [remote rejected] master (refusing to delete the current branch: refs/heads/master)
+error: failed to push some refs to 'github.com:<account>/<repo name>.git'
+```
+
+[Discuss](https://github.com/rsletta/til/issues/23)
+<hr>
 
 ### Install GitHub CLI
 ## Manual Install
