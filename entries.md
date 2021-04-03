@@ -40,6 +40,7 @@
 
 ### Server
 
+* [Stop Proxmox VM from shell](#Stop-Proxmox-VM-from-shell)
 * [Mount NFS file system to Ubuntu](#Mount-NFS-file-system-to-Ubuntu)
 * [Proxmox trying to acquire lock to stop VM - fix error](#Proxmox-trying-to-acquire-lock-to-stop-VM---fix-error)
 * [Copy public key to remote server](#Copy-public-key-to-remote-server)
@@ -345,6 +346,15 @@ alter user XSA_DEV password <new password>;
 <hr>
 
 ## Server
+
+### Stop Proxmox VM from shell
+```shell
+qm stop <vmid>
+```
+
+
+[Discuss](https://github.com/rsletta/til/issues/25)
+<hr>
 
 ### Mount NFS file system to Ubuntu
 ## Install dependencies (if missing)

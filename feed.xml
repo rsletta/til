@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-04-03T19:16:58.965Z</updated>
+    <updated>2021-04-03T19:18:38.054Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -13,6 +13,15 @@
     <link rel="self" href="https://github.com/rsletta/til"/>
     <subtitle>A reference of stuff I've picked up along the way</subtitle>
     <rights>Ronnie André Bjørvik Sletta</rights>
+    <entry>
+        <title type="html"><![CDATA[Stop Proxmox VM from shell]]></title>
+        <id>https://github.com/rsletta/til/issues/25</id>
+        <link href="https://github.com/rsletta/til/issues/25"/>
+        <updated>2021-04-03T19:17:49.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="shell language-shell">qm stop &lt;vmid&gt;
+</code></pre>]]></content>
+        <category label="server"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Mount NFS file system to Ubuntu]]></title>
         <id>https://github.com/rsletta/til/issues/24</id>
