@@ -40,6 +40,7 @@
 
 ### Server
 
+* [Mount NFS file system to Ubuntu](#Mount-NFS-file-system-to-Ubuntu)
 * [Proxmox trying to acquire lock to stop VM - fix error](#Proxmox-trying-to-acquire-lock-to-stop-VM---fix-error)
 * [Copy public key to remote server](#Copy-public-key-to-remote-server)
 
@@ -344,6 +345,31 @@ alter user XSA_DEV password <new password>;
 <hr>
 
 ## Server
+
+### Mount NFS file system to Ubuntu
+## Install dependencies (if missing)
+
+```shell
+sudo apt update
+sudo apt install nfs-common
+```
+
+## Create mount directory
+
+```shell
+mkdir <dir name>
+```
+
+## Mount NFS share
+```shell
+sudo mount -t nfs <host ip>:<share> <mount dir>
+```
+
+
+
+
+[Discuss](https://github.com/rsletta/til/issues/24)
+<hr>
 
 ### Proxmox trying to acquire lock to stop VM - fix error
 ```
