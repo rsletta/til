@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/rsletta/til</id>
     <title>Today I Learned - @rsletta</title>
-    <updated>2021-04-03T19:18:38.054Z</updated>
+    <updated>2021-04-10T23:13:09.315Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Ronnie André Bjørvik Sletta</name>
@@ -13,6 +13,37 @@
     <link rel="self" href="https://github.com/rsletta/til"/>
     <subtitle>A reference of stuff I've picked up along the way</subtitle>
     <rights>Ronnie André Bjørvik Sletta</rights>
+    <entry>
+        <title type="html"><![CDATA[Add Nord theme to Windows Terminal]]></title>
+        <id>https://github.com/rsletta/til/issues/26</id>
+        <link href="https://github.com/rsletta/til/issues/26"/>
+        <updated>2021-04-10T23:12:51.000Z</updated>
+        <content type="html"><![CDATA[<p>Add the following to <code>"schemes"</code> in Windows Terminal <code>settings.json</code>.</p>
+<pre><code class="JSON language-JSON">{
+    "name" : "nord",
+    "background" : "#2e3440",
+    "foreground" : "#d8dee9",
+    "black": "#3b4252",
+    "blue": "#81a1c1",
+    "brightBlack": "#4c566a",
+    "brightBlue": "#81a1c1",
+    "brightCyan": "#8fbcbb",
+    "brightGreen": "#a3be8c",
+    "brightPurple": "#b48ead",
+    "brightRed": "#bf616a",
+    "brightWhite": "#eceff4",
+    "brightYellow": "#ebcb8b",
+    "cyan": "#88c0d0",
+    "green": "#a3be8c",
+    "purple": "#b48ead",
+    "red": "#bf616a",
+    "white": "#e5e9f0",
+    "yellow": "#ebcb8b"
+}
+</code></pre>
+<p>Source: <a href="https://compiledexperience.com/blog/posts/windows-terminal-nord">Blog post</a> by <a href="https://twitter.com/nigelsampson">Nigel Sampson</a>.</p>]]></content>
+        <category label="terminal-shell"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Stop Proxmox VM from shell]]></title>
         <id>https://github.com/rsletta/til/issues/25</id>

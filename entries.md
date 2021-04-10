@@ -47,6 +47,7 @@
 
 ### Terminal / Shell
 
+* [Add Nord theme to Windows Terminal](#Add-Nord-theme-to-Windows-Terminal)
 * [Cleaning up files with awk](#Cleaning-up-files-with-awk)
 
 ### UI5
@@ -404,6 +405,38 @@ ssh-copy-id username@remote_host
 <hr>
 
 ## Terminal / Shell
+
+### Add Nord theme to Windows Terminal
+Add the following to ```"schemes"``` in Windows Terminal ```settings.json```.
+
+```JSON
+{
+    "name" : "nord",
+    "background" : "#2e3440",
+    "foreground" : "#d8dee9",
+    "black": "#3b4252",
+    "blue": "#81a1c1",
+    "brightBlack": "#4c566a",
+    "brightBlue": "#81a1c1",
+    "brightCyan": "#8fbcbb",
+    "brightGreen": "#a3be8c",
+    "brightPurple": "#b48ead",
+    "brightRed": "#bf616a",
+    "brightWhite": "#eceff4",
+    "brightYellow": "#ebcb8b",
+    "cyan": "#88c0d0",
+    "green": "#a3be8c",
+    "purple": "#b48ead",
+    "red": "#bf616a",
+    "white": "#e5e9f0",
+    "yellow": "#ebcb8b"
+}
+```
+
+Source: [Blog post](https://compiledexperience.com/blog/posts/windows-terminal-nord) by [Nigel Sampson](https://twitter.com/nigelsampson).
+
+[Discuss](https://github.com/rsletta/til/issues/26)
+<hr>
 
 ### Cleaning up files with awk
 Needed to clean up a JSON file, after I copied the JSON from the browser and got the line numbers too.
